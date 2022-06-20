@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+    dev-db:
+      image: postgres
+      ports: 
+         - 5432:5432
+      environment:
+         POSTGRES_USER: sanads1-postgres
+         POSTGRE_PASSWORD: AdunniAdexx 
+         POSTGRES_DB: nest-postgres
+         POSTGRES_HOST_AUTH_METHOD: trust
+      networks:
+         - sanads1
+    test-db:
+      image: postgres
+      ports: 
+         - 5433:5432
+      environment:
+         POSTGRES_USER: sanads1-postgres
+         POSTGRE_PASSWORD: AdunniAdexx 
+         POSTGRES_DB: nest-postgres
+         POSTGRES_HOST_AUTH_METHOD: trust
+      networks:
+         - sanads1
+networks:
+  sanads1:    
+    
+
+
